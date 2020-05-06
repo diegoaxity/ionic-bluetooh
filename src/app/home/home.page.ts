@@ -9,8 +9,8 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  service = '1111';
-  characteristic = '2222';
+  service = 'E20A39F4-73F5-4BC4-A12F-17D1AD07A961';
+  characteristic = '08590F7E-DB05-467E-8757-72F6FAEB13D4';
   device: any;
   writeValue: string = 'Hello world!';
 
@@ -245,7 +245,7 @@ export class HomePage {
       ],
       connectable: true,
       timeout: 0,
-      includeDeviceName: true
+      includeDeviceName: false
     };
     this.bluetoothle.startAdvertising(params).then(status => {
       console.log('startAdvertising', status);
