@@ -12,9 +12,30 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button (click)="scan()">scan</ion-button>
+  <br>
+  <ion-button (click)="startAdv()">start advertising</ion-button>
+  <br>
+  <ion-button (click)="connect()">connect</ion-button>
+  <br>
+  <ion-button (click)="discover()">discover</ion-button>
+  <br>
+  <ion-button (click)="write()">write</ion-button>
+  <ion-item>
+    <ion-label>Valor:</ion-label>
+    <ion-input value="Hello world" [(ngModel)]="writeValue"></ion-input>
+  </ion-item>
+  <br>
+  <hr>
+  <ion-button color="danger" (click)="scanOff()">stop scan</ion-button>
+  <br>
+  <ion-button color="danger" (click)="stopAdv()">stop advertising</ion-button>
+  <br>
+  <ion-button color="danger" (click)="reconnect()">reconnect</ion-button>
+  <br>
+  <ion-button color="danger" (click)="disconnect()">disconnect</ion-button>
+  <br>
+  <p>
+    {{ device | json }}
+  </p>
 </ion-content>
